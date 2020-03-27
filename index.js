@@ -12,7 +12,7 @@ function createEmployeeRecord(employeeData) {
 function createEmployeeRecords(employeeArrays){
   let employees = []
   employeeArrays.forEach((employee) => {
-    employees.push(createEmployeeRecord(employee))
+    this.push(createEmployeeRecord(employee))
   })
   return this
 }
