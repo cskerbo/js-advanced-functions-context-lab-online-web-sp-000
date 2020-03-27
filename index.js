@@ -9,6 +9,14 @@ function createEmployeeRecord(employeeData) {
   return this
 }
 
+function createEmployeeRecords(employeeArrays){
+  let employees = []
+  employeeArrays.forEach((employee) => {
+    employees.push(createEmployeeRecord(employee))
+  })
+  return employees
+}
+
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
