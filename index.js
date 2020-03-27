@@ -1,4 +1,13 @@
-/* Your Code Here */
+function createEmployeeRecord(employeeData) {
+  let employee = {}
+  employee.firstName = employeeArray[0]
+  employee.familyName = employeeArray[1]
+  employee.title = employeeArray[2]
+  employee.payPerHour = employeeArray[3]
+  employee.timeInEvents = []
+  employee.timeOutEvents = []
+  return this
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
