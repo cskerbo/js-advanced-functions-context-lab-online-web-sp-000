@@ -9,10 +9,10 @@ let createEmployeeRecord = function(employeeArray) {
   return this
 }
 
-function createEmployeeRecords(employeeArrays){
+let createEmployeeRecords = function(employeeArrays){
   let employees = []
   employeeArrays.forEach((employee) => {
-    this.push(createEmployeeRecord(employee))
+    employees.push(createEmployeeRecord(employee))
   })
   return this
 }
