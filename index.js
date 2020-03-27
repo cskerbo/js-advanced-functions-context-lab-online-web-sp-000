@@ -11,7 +11,7 @@ function createEmployeeRecord(array){
 
 function createEmployeeRecords(employeeArrays){
   return employeeArrays.forEach((employee) => {
-    return employees.push(createEmployeeRecord(employee))
+    return createEmployeeRecord(employee)
   })
 }
 
