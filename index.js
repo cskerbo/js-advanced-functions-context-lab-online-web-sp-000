@@ -1,12 +1,12 @@
-let createEmployeeRecord = function(employeeArray) {
-  const employee = {}
-  employee.firstName = employeeArray[0]
-  employee.familyName = employeeArray[1]
-  employee.title = employeeArray[2]
-  employee.payPerHour = employeeArray[3]
-  employee.timeInEvents = []
-  employee.timeOutEvents = []
-  return this
+function createEmployeeRecord(array) = {
+    return {
+        firstName: array[0],
+        familyName: array[1],
+        title: array[2],
+        payPerHour: array[3],
+        timeInEvents: [],
+        timeOutEvents: []
+    }
 }
 
 let createEmployeeRecords = function(employeeArrays){
