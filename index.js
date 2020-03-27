@@ -17,6 +17,21 @@ function createEmployeeRecords(employeeArrays){
   return this
 }
 
+function clockPunch(employeeRecord, dateStamp, eventType) {
+  let date = dateStamp.split(' ')
+  let timeEvent = {}
+  if (eventType === 'TimeIn') {
+    employeeRecord.timeInEvents.push(timeEvent)
+  }
+  else if (eventType === 'TimeOut') {
+    employeeRecord.timeOutEvents.push(timeEvent)
+  }
+  timeEvent.type = eventType
+  timeEvent.date = date[0]
+  timeEvent.hour = parseInt(date[1])
+  return this
+}
+
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
