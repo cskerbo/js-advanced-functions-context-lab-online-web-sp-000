@@ -1,4 +1,4 @@
-function createEmployeeRecord(array) = {
+function createEmployeeRecord(array){
     return {
         firstName: array[0],
         familyName: array[1],
