@@ -44,7 +44,7 @@ function hoursWorkedOnDate(dateStamp) {
 }
 
 function wagesEarnedOnDate(dateStamp) {
-  let payRate = hoursWorkedOnDate.call(this, dateStamp)
+  let payRate = hoursWorkedOnDate.call(this, dateStamp) * this.payPerHour
   let hoursWorked = hoursWorkedOnDate(dateStamp)
   return payRate * hoursWorked
 }
