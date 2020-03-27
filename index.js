@@ -15,25 +15,14 @@ function createEmployeeRecords(employeeArrays){
   })
 }
 
-function clockPunch(employeeRecord, dateStamp, eventType) {
-  let date = dateStamp.split(' ')
-  let timeEvent = {}
-  if (eventType === 'TimeIn') {
-    employeeRecord.timeInEvents.push(timeEvent)
-  }
-  else if (eventType === 'TimeOut') {
-    employeeRecord.timeOutEvents.push(timeEvent)
-  }
-  timeEvent.type = eventType
-  timeEvent.date = date[0]
-  timeEvent.hour = parseInt(date[1])
+function createTimeInEvent(dateStamp) {
+  let [date, hour] = dateStamp.split(' ')
+  this.timeInEvents.push({
+    type: 'TimeIn',
+    hour: parseInt(hour, 10),
+    date,
+  })
   return this
-}
-
-function createTimeInEvent(employeeRecord, dateStamp) {
-  let eventType = 'TimeIn'
-  let updatedRecord = clockPunch(employeeRecord, dateStamp, eventType)
-  return updatedRecord
 }
 
 function createTimeOutEvent(employeeRecord, dateStamp) {
