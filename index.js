@@ -26,9 +26,9 @@ function clockPunch(employeeRecord, dateStamp, eventType) {
   else if (eventType === 'TimeOut') {
     employeeRecord.timeOutEvents.push(timeEvent)
   }
-  this.type = eventType
-  this.date = date[0]
-  this.hour = parseInt(date[1])
+  timeEvent.type = eventType
+  timeEvent.date = date[0]
+  timeEvent.hour = parseInt(date[1])
   return this
 }
 
