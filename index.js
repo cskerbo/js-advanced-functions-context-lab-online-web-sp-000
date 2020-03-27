@@ -25,7 +25,7 @@ function createTimeInEvent(dateStamp) {
   return this
 }
 
-function createTimeOutEvent(employeeRecord, dateStamp) {
+function createTimeOutEvent(dateStamp) {
   let [date, hour] = dateStamp.split(' ')
   this.timeOutEvents.push({
     type: 'TimeOut',
