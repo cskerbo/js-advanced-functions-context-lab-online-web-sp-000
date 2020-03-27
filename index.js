@@ -1,11 +1,11 @@
 function createEmployeeRecord(employeeArray) {
   let employee = {}
-  this.firstName = employeeArray[0]
-  this.familyName = employeeArray[1]
-  this.title = employeeArray[2]
-  this.payPerHour = employeeArray[3]
-  this.timeInEvents = []
-  this.timeOutEvents = []
+  employee.firstName = employeeArray[0]
+  employee.familyName = employeeArray[1]
+  employee.title = employeeArray[2]
+  employee.payPerHour = employeeArray[3]
+  employee.timeInEvents = []
+  employee.timeOutEvents = []
   return this
 }
 
