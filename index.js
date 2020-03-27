@@ -1,5 +1,5 @@
 function createEmployeeRecord(employeeData) {
-  let this = {}
+  let employee = {}
   this.firstName = employeeArray[0]
   this.familyName = employeeArray[1]
   this.title = employeeArray[2]
