@@ -10,7 +10,7 @@ function createEmployeeRecord(array){
 }
 
 function createEmployeeRecords(employeeArrays){
-  return employeeArrays.map(function(employee) => {
+  return employeeArrays.map(function(employee){
     return createEmployeeRecord(employee)
   })
 }
