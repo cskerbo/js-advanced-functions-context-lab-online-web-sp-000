@@ -42,11 +42,10 @@ function hoursWorkedOnDate(dateStamp) {
   return (timeOut - timeIn) / 100
 }
 
-function wagesEarnedOnDate(employeeRecord, dateStamp) {
-  let payRate = employeeRecord.payPerHour
-  let hoursWorked = hoursWorkedOnDate(employeeRecord, dateStamp)
-  let wagesEarned = payRate * hoursWorked
-  return wagesEarned
+function wagesEarnedOnDate(dateStamp) {
+  let payRate = this.payPerHour
+  let hoursWorked = hoursWorkedOnDate(dateStamp)
+  return payRate * hoursWorked
 }
 
 
