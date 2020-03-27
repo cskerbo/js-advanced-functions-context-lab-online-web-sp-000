@@ -14,7 +14,7 @@ function createEmployeeRecords(employeeArrays){
   employeeArrays.forEach((employee) => {
     employees.push(createEmployeeRecord(employee))
   })
-  return employees
+  return this
 }
 
 /*
