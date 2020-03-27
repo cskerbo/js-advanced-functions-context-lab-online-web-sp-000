@@ -35,13 +35,13 @@ function clockPunch(employeeRecord, dateStamp, eventType) {
 function createTimeInEvent(employeeRecord, dateStamp) {
   let eventType = 'TimeIn'
   let updatedRecord = clockPunch(employeeRecord, dateStamp, eventType)
-  return this
+  return updatedRecord
 }
 
 function createTimeOutEvent(employeeRecord, dateStamp) {
   let eventType = 'TimeOut'
   let updatedRecord = clockPunch(employeeRecord, dateStamp, eventType)
-  return this
+  return updatedRecord
 }
 
 /*
