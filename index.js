@@ -32,6 +32,18 @@ function clockPunch(employeeRecord, dateStamp, eventType) {
   return this
 }
 
+function createTimeInEvent(employeeRecord, dateStamp) {
+  let eventType = 'TimeIn'
+  let updatedRecord = clockPunch(employeeRecord, dateStamp, eventType)
+  return this
+}
+
+function createTimeOutEvent(employeeRecord, dateStamp) {
+  let eventType = 'TimeOut'
+  let updatedRecord = clockPunch(employeeRecord, dateStamp, eventType)
+  return this
+}
+
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
