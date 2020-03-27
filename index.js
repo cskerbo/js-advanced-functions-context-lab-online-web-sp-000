@@ -26,9 +26,13 @@ function createTimeInEvent(dateStamp) {
 }
 
 function createTimeOutEvent(employeeRecord, dateStamp) {
-  let eventType = 'TimeOut'
-  let updatedRecord = clockPunch(employeeRecord, dateStamp, eventType)
-  return updatedRecord
+  let [date, hour] = dateStamp.split(' ')
+  this.timeOutEvents.push({
+    type: 'TimeOut',
+    hour: parseInt(hour, 10),
+    date,
+  })
+  return this
 }
 
 function hoursWorkedOnDate(employeeRecord, dateStamp) {
