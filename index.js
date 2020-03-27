@@ -44,6 +44,36 @@ function createTimeOutEvent(employeeRecord, dateStamp) {
   return updatedRecord
 }
 
+function hoursWorkedOnDate(employeeRecord, dateStamp) {
+  const eventOnDate = function(event) { return event.date === dateStamp }
+  const timeIn = employeeRecord.timeInEvents.find(eventOnDate).hour;
+  const timeOut = employeeRecord.timeOutEvents.find(eventOnDate).hour;
+  let hoursWorked = (timeOut - timeIn) / 100
+  return this
+}
+
+function wagesEarnedOnDate(employeeRecord, dateStamp) {
+  let payRate = employeeRecord.payPerHour
+  let hoursWorked = hoursWorkedOnDate(employeeRecord, dateStamp)
+  let wagesEarned = payRate * hoursWorked
+  return wagesEarned
+}
+
+
+function findEmployeeByFirstName(employees, firstName){
+    return employees.find( (employee) => {
+        return employee.firstName === firstName
+    });
+}
+
+function calculatePayroll(employeeRecords){
+
+    const reducer = (totalWages, employeeRecords) => {
+        return totalWages + allWagesFor(employeeRecords)
+    }
+
+    return employeeRecords.reduce(reducer, 0)
+}
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
